@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GynFishing | Pesca Esportiva de Alta Performance</title>
+    <meta name="description" content="GynFishing — pesca esportiva de alta performance, roteiros, equipamentos custom e comunidade.">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Google Fonts Inter e Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilo Principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO / NAVEGAÇÃO -->
+    <header id="header">
+        <div class="nav-container">
+            <div class="logo" onclick="window.scrollTo(0, 0)" tabindex="0">Gyn Fishing</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">A Marca</a></li>
+                <li><a href="#vertentes">Vertentes</a></li>
+                <li><a href="#equipamentos">Equipamentos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><button type="button" class="btn-admin-nav" id="btn-open-admin" aria-haspopup="dialog" aria-controls="modal-admin" aria-label="Abrir painel administrativo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Painel Admin
+                </button></li>
+            </ul>
+            <button type="button" class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+    <!-- SEÇÃO HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 id="hero-title">GYN FISHING</h1>
+            <p id="hero-desc">A evolução da pesca esportiva. Técnica avançada, equipamentos de alta precisão e roteiros exclusivos sob uma ótica contemporânea e sofisticada.</p>
+            <a href="#galeria" class="btn-silver">Explorar Galeria</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE (A MARCA) -->
+    <section class="section-container reveal" id="sobre">
+        <div class="section-header">
+            <p id="sobre-sub">Conheça nossa essência</p>
+            <h2 id="sobre-header">A Marca GynFishing</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3 id="sobre-content-title">Uma perspectiva mineral de alta performance</h3>
+                <p id="sobre-p1">Nascida do desejo de elevar a experiência da pesca esportiva no Brasil, a GynFishing une paixão, sofisticação e precisão técnica. Nosso foco é oferecer caminhos para o pescador que busca alta performance, durabilidade e respeito máximo à biodiversidade dos nossos rios e lagos.</p>
+                <p id="sobre-p2">Valorizamos o esporte consciente. Praticamos e incentivamos o pesque e solte, garantindo a preservação das espécies gigantes brasileiras e promovendo a cultura da pesca responsável e ecológica.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <h4 id="sobre-feat1-title">Equipamentos Custom</h4>
+                        <p id="sobre-feat1-desc">Varas sob medida para sua pescaria.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 id="sobre-feat2-title">Roteiros Secretos</h4>
+                        <p id="sobre-feat2-desc">Locais mapeados de alta produtividade.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <div class="about-image-overlay">
+                    <h4 id="sobre-img-title">Serra da Mesa, GO</h4>
+                    <p id="sobre-img-desc">Pesca esportiva de Tucunarés Azuis gigantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO VERTENTES -->
+    <section class="section-container reveal" id="vertentes">
+        <div class="section-header">
+            <p>O que fazemos</p>
+            <h2>Nossas Vertentes</h2>
+        </div>
+        
+        <div class="grid-services" id="vertentes-container">
+            <!-- Inserido dinamicamente via JS -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO EQUIPAMENTOS (nova) -->
+    <section class="section-container reveal" id="equipamentos" aria-labelledby="equipamentos-title">
+        <div class="section-header">
+            <p>Marcas & Equipamentos</p>
+            <h2 id="equipamentos-title">Equipamentos Utilizados</h2>
+        </div>
+
+        <div class="equipment-list" id="equipment-list" aria-live="polite">
+            <!-- Inserido dinamicamente via JS (marcas) -->
+        </div>
+
+        <p class="equipment-note" style="margin-top:1rem; color:var(--silver-secondary);">Adicione e edite as marcas de equipamentos pelo Painel Administrativo → Editar Páginas do Site → Equipamentos.</p>
+    </section>
+
+    <!-- SEÇÃO GALERIA E FEED DINÂMICO -->
+    <section class="section-container reveal" id="galeria">
+        <div class="section-header">
+            <p>Feed de Aventuras</p>
+            <h2>Expedições & Registros</h2>
+        </div>
+
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="foto">Fotos</button>
+            <button class="filter-btn" data-filter="video">Vídeos</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-container">
+            <!-- Inserido dinamicamente via JS (localStorage) -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO COMENTÁRIOS E DEPOIMENTOS -->
+    <section class="section-container reveal" id="depoimentos">
+        <div class="section-header">
+            <p>Comunidade GynFishing</p>
+            <h2>Depoimentos & Relatos</h2>
+        </div>
+
+        <div class="comments-container">
+            <!-- Formulário de Comentário -->
+            <form class="comment-form" id="comment-form">
+                <h3>Deixe seu Relato ou Comentário</h3>
+                
+                <div class="form-grid-two">
+                    <div class="form-group">
+                        <label for="comment-name">Seu Nome</label>
+                        <input type="text" id="comment-name" placeholder="Ex: Rodrigo Souza" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-role">Sua Cidade / Função</label>
+                        <input type="text" id="comment-role" placeholder="Ex: Goiânia - GO" required>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="comment-message">Seu Relato / Mensagem</label>
+                    <textarea id="comment-message" rows="4" placeholder="Conte como foi sua experiência com a GynFishing ou fale sobre o esporte..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-form-submit">Enviar Comentário</button>
+            </form>
+
+            <!-- Lista de Comentários -->
+            <div class="comments-list" id="comments-list-container" aria-live="polite">
+                <!-- Inserido dinamicamente via JS -->
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- MODAL DO PAINEL ADMIN (Dashboard Local-First) -->
+    <div class="modal-admin" id="modal-admin" role="dialog" aria-modal="true" aria-labelledby="admin-title" aria-hidden="true">
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <h2 id="admin-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    Painel Administrativo GynFishing
+                </h2>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button type="button" class="btn-admin-nav" id="btn-logout-admin" style="display: none; padding: 0.3rem 0.8rem; font-size: 0.8rem; border-color: #dc3545; color: #dc3545; cursor: pointer;">Sair</button>
+                    <button type="button" class="modal-close" id="btn-close-admin" aria-label="Fechar painel" style="margin-top: -4px;">&times;</button>
+                </div>
+            </div>
+            
+            <!-- Tela de Login do Administrador -->
+            <div class="modal-body" id="admin-login-section">
+                <form class="admin-form" id="admin-login-form" style="max-width: 400px; margin: 2rem auto; text-align: center;">
+                    <div class="card-icon" style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+                    <h3 style="color: white; margin-bottom: 1rem;">Acesso Restrito</h3>
+                    <p style="color: var(--silver-secondary); font-size: 0.95rem; margin-bottom: 2rem;">Digite a senha mestra para acessar o painel de controle e fazer alterações. (Local-first)</p>
+                    <div class="form-group" style="margin-bottom: 1.5rem; text-align: left;">
+                        <label for="admin-password">Senha do Administrador</label>
+                        <input type="password" id="admin-password" placeholder="Digite a senha" required>
+                    </div>
+                    <button type="submit" class="btn-form-submit">Entrar no Painel</button>
+                    <p id="login-error-msg" style="color: #dc3545; font-size: 0.9rem; margin-top: 1rem; display: none; font-weight: 600;">Senha incorreta. Tente novamente.</p>
+                </form>
+            </div>
+
+            <!-- Seção Principal de Edição (Apenas após o login) -->
+            <div id="admin-main-section" style="display: none;">
+                <div class="modal-body">
+                    <!-- Abas do Admin -->
+                    <div class="admin-tabs">
+                        <button type="button" class="admin-tab-btn active" data-pane="tab-cadastrar">Cadastrar Nova Publicação</button>
+                        <button type="button" class="admin-tab-btn" data-pane="tab-feed">Gerenciar Feed</button>
+                        <button type="button" class="admin-tab-btn" data-pane="tab-comentarios">Gerenciar Comentários</button>
+                        <button type="button" class="admin-tab-btn" data-pane="tab-editar-site">Editar Páginas do Site</button>
+                    </div>
+
+                    <!-- Painel: Cadastrar Publicação -->
+                    <div class="admin-pane active" id="tab-cadastrar">
+                        <form class="admin-form" id="admin-add-form">
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="post-title">Título da Publicação</label>
+                                    <input type="text" id="post-title" placeholder="Ex: Gigante do Araguaia - 2.20m" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="post-type">Tipo de Mídia</label>
+                                    <select id="post-type" required>
+                                        <option value="foto">Foto</option>
+                                        <option value="video">Vídeo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Campo Condicional: Link de Vídeo -->
+                            <div class="form-group" id="video-url-group" style="display: none;">
+                                <label for="post-video-url">Link do Vídeo (YouTube, Vimeo, ou link direto mp4)</label>
+                                <input type="url" id="post-video-url" placeholder="Ex: https://www.youtube.com/watch?v=XXXXXX">
+                            </div>
+
+                            <!-- Campo Condicional: Upload de Foto -->
+                            <div class="form-group" id="image-upload-group">
+                                <label>Selecione a Imagem (Upload Local)</label>
+                                <div class="file-upload-wrapper">
+                                    <span class="upload-icon">📁</span>
+                                    <p class="upload-text">Arraste ou clique para selecionar uma foto</p>
+                                    <input type="file" id="post-image-file" accept="image/*">
+                                </div>
+                                <div class="image-preview-box" id="image-preview-box" style="display:none;">
+                                    <img id="image-preview" src="" alt="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="post-desc">Descrição / Detalhes</label>
+                                <textarea id="post-desc" rows="3" placeholder="Informações de isca, vara, peso do peixe, etc..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-form-submit">Publicar no Site</button>
+                        </form>
+                    </div>
+
+                    <!-- Painel: Gerenciar Feed -->
+                    <div class="admin-pane" id="tab-feed">
+                        <div class="admin-table-container">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mídia</th>
+                                        <th>Título</th>
+                                        <th>Tipo</th>
+                                        <th>Descrição</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-feed-table-body">
+                                    <!-- Preenchido dinamicamente via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Painel: Gerenciar Comentários -->
+                    <div class="admin-pane" id="tab-comentarios">
+                        <div class="admin-table-container">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Autor</th>
+                                        <th>Origem</th>
+                                        <th>Comentário</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-comments-table-body">
+                                    <!-- Preenchido dinamicamente via JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Painel: Editar Páginas do Site (CMS) -->
+                    <div class="admin-pane" id="tab-editar-site">
+                        <form class="admin-form" id="admin-cms-form">
+                            <!-- Seção Home (Hero) -->
+                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 1rem;">Seção Home (Banner Inicial)</h3>
+                            <div class="form-group">
+                                <label for="cms-hero-title">Título Principal</label>
+                                <input type="text" id="cms-hero-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-hero-subtitle">Texto de Apoio</label>
+                                <textarea id="cms-hero-subtitle" rows="2" required></textarea>
+                            </div>
+
+                            <!-- Seção A Marca (Sobre Nós) -->
+                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Seção A Marca (Sobre Nós)</h3>
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="cms-sobre-sub">Subtítulo Superior</label>
+                                    <input type="text" id="cms-sobre-sub" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-sobre-title">Título da Seção</label>
+                                    <input type="text" id="cms-sobre-title" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-sobre-content-title">Título do Conteúdo</label>
+                                <input type="text" id="cms-sobre-content-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-sobre-p1">Parágrafo 1</label>
+                                <textarea id="cms-sobre-p1" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-sobre-p2">Parágrafo 2</label>
+                                <textarea id="cms-sobre-p2" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="cms-sobre-feat1-title">Destaque 1 - Título</label>
+                                    <input type="text" id="cms-sobre-feat1-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-sobre-feat1-desc">Destaque 1 - Descrição</label>
+                                    <input type="text" id="cms-sobre-feat1-desc" required>
+                                </div>
+                            </div>
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="cms-sobre-feat2-title">Destaque 2 - Título</label>
+                                    <input type="text" id="cms-sobre-feat2-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-sobre-feat2-desc">Destaque 2 - Descrição</label>
+                                    <input type="text" id="cms-sobre-feat2-desc" required>
+                                </div>
+                            </div>
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="cms-sobre-img-title">Título da Imagem Lateral</label>
+                                    <input type="text" id="cms-sobre-img-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-sobre-img-desc">Descrição da Imagem Lateral</label>
+                                    <input type="text" id="cms-sobre-img-desc" required>
+                                </div>
+                            </div>
+
+                            <!-- Seção Vertentes -->
+                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Seção Vertentes (Nossos Serviços)</h3>
+                            
+                            <h4 style="color: var(--silver-secondary); margin-top: 1rem;">Serviço 1</h4>
+                            <div class="form-grid-two">
+                                <div class="form-group" style="flex: 0 0 100px;">
+                                    <label for="cms-vert1-icon">Ícone/Emoji</label>
+                                    <input type="text" id="cms-vert1-icon" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-vert1-title">Título</label>
+                                    <input type="text" id="cms-vert1-title" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-vert1-desc">Descrição</label>
+                                <textarea id="cms-vert1-desc" rows="2" required></textarea>
+                            </div>
+
+                            <h4 style="color: var(--silver-secondary); margin-top: 1.5rem;">Serviço 2</h4>
+                            <div class="form-grid-two">
+                                <div class="form-group" style="flex: 0 0 100px;">
+                                    <label for="cms-vert2-icon">Ícone/Emoji</label>
+                                    <input type="text" id="cms-vert2-icon" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-vert2-title">Título</label>
+                                    <input type="text" id="cms-vert2-title" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-vert2-desc">Descrição</label>
+                                <textarea id="cms-vert2-desc" rows="2" required></textarea>
+                            </div>
+
+                            <h4 style="color: var(--silver-secondary); margin-top: 1.5rem;">Serviço 3</h4>
+                            <div class="form-grid-two">
+                                <div class="form-group" style="flex: 0 0 100px;">
+                                    <label for="cms-vert3-icon">Ícone/Emoji</label>
+                                    <input type="text" id="cms-vert3-icon" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-vert3-title">Título</label>
+                                    <input type="text" id="cms-vert3-title" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-vert3-desc">Descrição</label>
+                                <textarea id="cms-vert3-desc" rows="2" required></textarea>
+                            </div>
+
+                            <!-- Seção Equipamentos (nova no CMS) -->
+                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Seção Equipamentos</h3>
+                            <p style="color: var(--silver-secondary);">Preencha até 6 marcas (aparecerão na página)</p>
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="cms-equip-1">Marca 1</label>
+                                    <input type="text" id="cms-equip-1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-equip-2">Marca 2</label>
+                                    <input type="text" id="cms-equip-2">
+                                </div>
+                            </div>
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="cms-equip-3">Marca 3</label>
+                                    <input type="text" id="cms-equip-3">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-equip-4">Marca 4</label>
+                                    <input type="text" id="cms-equip-4">
+                                </div>
+                            </div>
+                            <div class="form-grid-two">
+                                <div class="form-group">
+                                    <label for="cms-equip-5">Marca 5</label>
+                                    <input type="text" id="cms-equip-5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cms-equip-6">Marca 6</label>
+                                    <input type="text" id="cms-equip-6">
+                                </div>
+                            </div>
+
+                            <!-- Seção Redes Sociais (nova no CMS) -->
+                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Redes Sociais / Links do Rodapé</h3>
+                            <div class="form-group">
+                                <label for="cms-social-youtube">YouTube</label>
+                                <input type="url" id="cms-social-youtube" placeholder="https://youtube.com/..">
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-social-instagram">Instagram</label>
+                                <input type="url" id="cms-social-instagram" placeholder="https://instagram.com/..">
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-social-tiktok">TikTok</label>
+                                <input type="url" id="cms-social-tiktok" placeholder="https://tiktok.com/..">
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-social-facebook">Facebook</label>
+                                <input type="url" id="cms-social-facebook" placeholder="https://facebook.com/..">
+                            </div>
+                            <div class="form-group">
+                                <label for="cms-social-x">X (Twitter)</label>
+                                <input type="url" id="cms-social-x" placeholder="https://x.com/..">
+                            </div>
+
+                            <!-- Alterar Senha Admin (local) -->
+                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Senha do Painel (Local)</h3>
+                            <div class="form-group">
+                                <label for="cms-admin-newpass">Definir nova senha do painel (local)</label>
+                                <input type="password" id="cms-admin-newpass" placeholder="Deixe em branco para manter a atual">
+                            </div>
+
+                            <button type="submit" class="btn-form-submit" style="margin-top: 2rem;">Salvar Todas as Alterações</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE VISUALIZAÇÃO E PLAY DE VÍDEO -->
+    <div class="modal-video" id="modal-video" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-video-container">
+            <button type="button" class="modal-video-close" id="btn-close-video" aria-label="Fechar vídeo">&times;</button>
+            <div id="video-player-target" style="width: 100%; height: 100%;">
+                <!-- Iframe ou vídeo inserido pelo JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICAÇÃO TOAST -->
+    <div class="toast" id="toast" role="status" aria-live="polite">Ação concluída com sucesso!</div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-info">
+                <div class="footer-logo">Gyn Fishing</div>
+                <p>Proporcionando vivências de alta fidelidade e conectando pescadores de alta performance à preservação dos tesouros aquáticos nacionais.</p>
+            </div>
+            
+            <div class="footer-links-social">
+                <div class="social-links" id="footer-social-links">
+                    <a id="footer-youtube" href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a id="footer-instagram" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a id="footer-tiktok" href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
+                    <a id="footer-facebook" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a id="footer-x" href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--silver-dark); margin: 0;">Plataforma Interativa Local-First</p>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            <p>&copy; 2026 gynfishing.com.br. Todos os direitos reservados. Design sofisticado e funcional.</p>
+        </div>
+    </footer>
+
+    <!-- Lógica de Interatividade -->
+    <script src="app.js" defer></script>
+</body>
+</html>
