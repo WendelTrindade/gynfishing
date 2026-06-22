@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+set -e
+OUT_ZIP="gynfishing_cms.zip"
+echo "Criando arquivos temporários e gerando ${OUT_ZIP}..."
+
+cat > index.html <<'HTML'
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -24,7 +30,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">A Marca</a></li>
                 <li><a href="#vertentes">Vertentes</a></li>
-                <li><a href="#equipamentos">Equipamentos</a></li>
+                <li><a href="#equipamentos">Marcas</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><button type="button" class="btn-admin-nav" id="btn-open-admin" aria-haspopup="dialog" aria-controls="modal-admin" aria-label="Abrir painel administrativo">
@@ -94,18 +100,18 @@
         </div>
     </section>
 
-    <!-- SEÇÃO EQUIPAMENTOS (nova) -->
+    <!-- SEÇÃO MARCAS (antiga Equipamentos) -->
     <section class="section-container reveal" id="equipamentos" aria-labelledby="equipamentos-title">
         <div class="section-header">
             <p>Marcas & Equipamentos</p>
-            <h2 id="equipamentos-title">Equipamentos Utilizados</h2>
+            <h2 id="equipamentos-title">Marcas</h2>
         </div>
 
         <div class="equipment-list" id="equipment-list" aria-live="polite">
             <!-- Inserido dinamicamente via JS (marcas) -->
         </div>
 
-        <p class="equipment-note" style="margin-top:1rem; color:var(--silver-secondary);">Adicione e edite as marcas de equipamentos pelo Painel Administrativo → Editar Páginas do Site → Equipamentos.</p>
+        <p class="equipment-note" style="margin-top:1rem; color:var(--silver-secondary);">Adicione e edite as marcas pelo Painel Administrativo → Editar Páginas do Site → Equipamentos.</p>
     </section>
 
     <!-- SEÇÃO GALERIA E FEED DINÂMICO -->
@@ -306,221 +312,3 @@
                             <!-- Seção A Marca (Sobre Nós) -->
                             <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Seção A Marca (Sobre Nós)</h3>
                             <div class="form-grid-two">
-                                <div class="form-group">
-                                    <label for="cms-sobre-sub">Subtítulo Superior</label>
-                                    <input type="text" id="cms-sobre-sub" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-sobre-title">Título da Seção</label>
-                                    <input type="text" id="cms-sobre-title" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-sobre-content-title">Título do Conteúdo</label>
-                                <input type="text" id="cms-sobre-content-title" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-sobre-p1">Parágrafo 1</label>
-                                <textarea id="cms-sobre-p1" rows="3" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-sobre-p2">Parágrafo 2</label>
-                                <textarea id="cms-sobre-p2" rows="3" required></textarea>
-                            </div>
-                            
-                            <div class="form-grid-two">
-                                <div class="form-group">
-                                    <label for="cms-sobre-feat1-title">Destaque 1 - Título</label>
-                                    <input type="text" id="cms-sobre-feat1-title" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-sobre-feat1-desc">Destaque 1 - Descrição</label>
-                                    <input type="text" id="cms-sobre-feat1-desc" required>
-                                </div>
-                            </div>
-                            <div class="form-grid-two">
-                                <div class="form-group">
-                                    <label for="cms-sobre-feat2-title">Destaque 2 - Título</label>
-                                    <input type="text" id="cms-sobre-feat2-title" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-sobre-feat2-desc">Destaque 2 - Descrição</label>
-                                    <input type="text" id="cms-sobre-feat2-desc" required>
-                                </div>
-                            </div>
-                            <div class="form-grid-two">
-                                <div class="form-group">
-                                    <label for="cms-sobre-img-title">Título da Imagem Lateral</label>
-                                    <input type="text" id="cms-sobre-img-title" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-sobre-img-desc">Descrição da Imagem Lateral</label>
-                                    <input type="text" id="cms-sobre-img-desc" required>
-                                </div>
-                            </div>
-
-                            <!-- Seção Vertentes -->
-                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Seção Vertentes (Nossos Serviços)</h3>
-                            
-                            <h4 style="color: var(--silver-secondary); margin-top: 1rem;">Serviço 1</h4>
-                            <div class="form-grid-two">
-                                <div class="form-group" style="flex: 0 0 100px;">
-                                    <label for="cms-vert1-icon">Ícone/Emoji</label>
-                                    <input type="text" id="cms-vert1-icon" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-vert1-title">Título</label>
-                                    <input type="text" id="cms-vert1-title" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-vert1-desc">Descrição</label>
-                                <textarea id="cms-vert1-desc" rows="2" required></textarea>
-                            </div>
-
-                            <h4 style="color: var(--silver-secondary); margin-top: 1.5rem;">Serviço 2</h4>
-                            <div class="form-grid-two">
-                                <div class="form-group" style="flex: 0 0 100px;">
-                                    <label for="cms-vert2-icon">Ícone/Emoji</label>
-                                    <input type="text" id="cms-vert2-icon" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-vert2-title">Título</label>
-                                    <input type="text" id="cms-vert2-title" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-vert2-desc">Descrição</label>
-                                <textarea id="cms-vert2-desc" rows="2" required></textarea>
-                            </div>
-
-                            <h4 style="color: var(--silver-secondary); margin-top: 1.5rem;">Serviço 3</h4>
-                            <div class="form-grid-two">
-                                <div class="form-group" style="flex: 0 0 100px;">
-                                    <label for="cms-vert3-icon">Ícone/Emoji</label>
-                                    <input type="text" id="cms-vert3-icon" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-vert3-title">Título</label>
-                                    <input type="text" id="cms-vert3-title" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-vert3-desc">Descrição</label>
-                                <textarea id="cms-vert3-desc" rows="2" required></textarea>
-                            </div>
-
-                            <!-- Seção Equipamentos (nova no CMS) -->
-                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Seção Equipamentos</h3>
-                            <p style="color: var(--silver-secondary);">Preencha até 6 marcas (aparecerão na página)</p>
-                            <div class="form-grid-two">
-                                <div class="form-group">
-                                    <label for="cms-equip-1">Marca 1</label>
-                                    <input type="text" id="cms-equip-1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-equip-2">Marca 2</label>
-                                    <input type="text" id="cms-equip-2">
-                                </div>
-                            </div>
-                            <div class="form-grid-two">
-                                <div class="form-group">
-                                    <label for="cms-equip-3">Marca 3</label>
-                                    <input type="text" id="cms-equip-3">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-equip-4">Marca 4</label>
-                                    <input type="text" id="cms-equip-4">
-                                </div>
-                            </div>
-                            <div class="form-grid-two">
-                                <div class="form-group">
-                                    <label for="cms-equip-5">Marca 5</label>
-                                    <input type="text" id="cms-equip-5">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cms-equip-6">Marca 6</label>
-                                    <input type="text" id="cms-equip-6">
-                                </div>
-                            </div>
-
-                            <!-- Seção Redes Sociais (nova no CMS) -->
-                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Redes Sociais / Links do Rodapé</h3>
-                            <div class="form-group">
-                                <label for="cms-social-youtube">YouTube</label>
-                                <input type="url" id="cms-social-youtube" placeholder="https://youtube.com/..">
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-social-instagram">Instagram</label>
-                                <input type="url" id="cms-social-instagram" placeholder="https://instagram.com/..">
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-social-tiktok">TikTok</label>
-                                <input type="url" id="cms-social-tiktok" placeholder="https://tiktok.com/..">
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-social-facebook">Facebook</label>
-                                <input type="url" id="cms-social-facebook" placeholder="https://facebook.com/..">
-                            </div>
-                            <div class="form-group">
-                                <label for="cms-social-x">X (Twitter)</label>
-                                <input type="url" id="cms-social-x" placeholder="https://x.com/..">
-                            </div>
-
-                            <!-- Alterar Senha Admin (local) -->
-                            <h3 style="color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 2rem;">Senha do Painel (Local)</h3>
-                            <div class="form-group">
-                                <label for="cms-admin-newpass">Definir nova senha do painel (local)</label>
-                                <input type="password" id="cms-admin-newpass" placeholder="Deixe em branco para manter a atual">
-                            </div>
-
-                            <button type="submit" class="btn-form-submit" style="margin-top: 2rem;">Salvar Todas as Alterações</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL DE VISUALIZAÇÃO E PLAY DE VÍDEO -->
-    <div class="modal-video" id="modal-video" role="dialog" aria-modal="true" aria-hidden="true">
-        <div class="modal-video-container">
-            <button type="button" class="modal-video-close" id="btn-close-video" aria-label="Fechar vídeo">&times;</button>
-            <div id="video-player-target" style="width: 100%; height: 100%;">
-                <!-- Iframe ou vídeo inserido pelo JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- NOTIFICAÇÃO TOAST -->
-    <div class="toast" id="toast" role="status" aria-live="polite">Ação concluída com sucesso!</div>
-
-    <!-- RODAPÉ -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo-info">
-                <div class="footer-logo">Gyn Fishing</div>
-                <p>Proporcionando vivências de alta fidelidade e conectando pescadores de alta performance à preservação dos tesouros aquáticos nacionais.</p>
-            </div>
-            
-            <div class="footer-links-social">
-                <div class="social-links" id="footer-social-links">
-                    <a id="footer-youtube" href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    <a id="footer-instagram" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a id="footer-tiktok" href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
-                    <a id="footer-facebook" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    <a id="footer-x" href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
-                </div>
-                <p style="font-size: 0.8rem; color: var(--silver-dark); margin: 0;">Plataforma Interativa Local-First</p>
-            </div>
-        </div>
-        
-        <div class="footer-copy">
-            <p>&copy; 2026 gynfishing.com.br. Todos os direitos reservados. Design sofisticado e funcional.</p>
-        </div>
-    </footer>
-
-    <!-- Lógica de Interatividade -->
-    <script src="app.js" defer></script>
-</body>
-</html>
